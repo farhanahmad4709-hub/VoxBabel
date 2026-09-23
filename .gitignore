@@ -1,0 +1,105 @@
+# ═══════════════════════════════════════════════════════
+#  VoxBabel — .gitignore
+# ═══════════════════════════════════════════════════════
+
+# ── Local Documentation (plans, proposals, reports) ──
+docs/
+
+# ── Environment & Secrets ──
+.env
+.env.local
+.env.*.local
+
+# ═══════════════════════════════════════════════════════
+#  Python / Backend
+# ═══════════════════════════════════════════════════════
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+
+# Ruff / linters
+.ruff_cache/
+
+# Alembic
+backend/alembic/versions/__pycache__/
+
+# AI model weights (too large for git)
+*.bin
+*.pt
+*.onnx
+*.safetensors
+models/
+
+# ═══════════════════════════════════════════════════════
+#  Node.js / Frontend (React + Vite)
+# ═══════════════════════════════════════════════════════
+node_modules/
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ═══════════════════════════════════════════════════════
+#  Evaluation & Results
+# ═══════════════════════════════════════════════════════
+eval/results/
+
+# ═══════════════════════════════════════════════════════
+#  OS & IDE
+# ═══════════════════════════════════════════════════════
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+._*
+
+# VS Code
+.vscode/
+
+# JetBrains (PyCharm, WebStorm)
+.idea/
+
+# ═══════════════════════════════════════════════════════
+#  Docker
+# ═══════════════════════════════════════════════════════
+*.log
+docker-compose.override.yml
+
+# ═══════════════════════════════════════════════════════
+#  Misc
+# ═══════════════════════════════════════════════════════
+*.bak
+*.swp
+*.swo
+*~
