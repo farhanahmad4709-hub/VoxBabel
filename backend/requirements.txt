@@ -1,0 +1,43 @@
+# ═══════════════════════════════════════════════════════
+#  VoxBabel — Python Dependencies
+#  Install: pip install -r requirements.txt
+# ═══════════════════════════════════════════════════════
+
+# ── Web Framework ──
+fastapi>=0.115
+uvicorn[standard]>=0.30
+websockets>=13.0
+pydantic>=2.0
+pydantic-settings>=2.0
+
+# ── Database ──
+sqlalchemy[asyncio]>=2.0
+asyncpg>=0.30
+alembic>=1.14
+
+# ── AI Providers (Local — Free) ──
+faster-whisper>=1.1            # STT  — OpenAI Whisper (optimized)
+fast-langdetect>=0.3           # LID  — fastText lid.176
+transformers>=4.45             # MT   — HuggingFace OPUS-MT models
+sentencepiece>=0.2             # MT   — tokenizer for OPUS-MT
+piper-tts>=1.2                 # TTS  — Piper (local, MIT license)
+
+# ── AI Providers (Cloud — Optional, Free Tier) ──
+google-cloud-speech>=2.28      # STT  — Google Cloud (60 min/month free)
+google-cloud-translate>=3.18   # MT   — Google Translate (500K chars/month free)
+google-cloud-texttospeech>=2.20 # TTS — Google Cloud (1M chars/month free)
+
+# ── Audio Processing ──
+numpy>=1.26
+soundfile>=0.12
+
+# ── Evaluation (RQ1, RQ2, RQ3) ──
+sacrebleu>=2.4                 # BLEU scoring
+nltk>=3.9                      # METEOR scoring
+jiwer>=3.0                     # WER calculation
+
+# ── Dev & Testing ──
+pytest>=8.0
+pytest-asyncio>=0.24
+httpx>=0.28
+ruff>=0.7
